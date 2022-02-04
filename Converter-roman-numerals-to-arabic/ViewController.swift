@@ -22,12 +22,13 @@ class ViewController: UIViewController {
     @IBAction func pushI(_ sender: UIButton) {
         symbols.append("I")
         labelRoman.text = String(symbols)
-        labelArabic.text =  romanNumbers(roman: symbols)
+        //labelArabic.text =  romanNumbers(roman: symbols)
         
         //labelArabic = romanNumbers(roman: symbols)
     }
     @IBAction func clearOneNumeral(_ sender: UIButton) {
-        symbols = []
+        if symbols.count >= 1 {
+            symbols.removeLast()}
         labelRoman.text = String(symbols)
     }
     @IBAction func pushV(_ sender: UIButton) {
