@@ -9,8 +9,8 @@ import Foundation
 var number = 0
 var symbols = [Character]()
 
-func romanNumbers(roman: String) -> Int {
-    for i: Character in roman {
+func romanNumbers(roman: [Character]) -> Int {
+    for i in roman {
         symbols.append(i)
     }
    // print(symbols)

@@ -13,36 +13,48 @@ class ViewController: UIViewController {
     @IBOutlet weak var labelRoman: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        labelRoman.text = "Enter numerals"
+         //labelArabic = romanNumbers(roman: symbols)
         // Do any additional setup after loading the view.
     }
 
-
+    
+    
     @IBAction func pushI(_ sender: UIButton) {
-        labelRoman.text = "I"
+        symbols.append("I")
+        labelRoman.text = String(symbols)
+        labelArabic.text =  romanNumbers(roman: symbols)
+        
+        //labelArabic = romanNumbers(roman: symbols)
     }
     @IBAction func clearOneNumeral(_ sender: UIButton) {
-        labelRoman.text = ""
+        symbols = []
+        labelRoman.text = String(symbols)
     }
     @IBAction func pushV(_ sender: UIButton) {
-        labelRoman.text = "V"
+        symbols.append("V")
+        labelRoman.text = String(symbols)
     }
     @IBAction func pushX(_ sender: UIButton) {
-        labelRoman.text = "X"
+        symbols.append("X")
+        labelRoman.text = String(symbols)
     }
     @IBAction func pushL(_ sender: UIButton) {
-        labelRoman.text = "L"
+        symbols.append("L")
+        labelRoman.text = String(symbols)
     }
     @IBAction func pushC(_ sender: UIButton) {
-        labelRoman.text = "C"
+        symbols.append("C")
+        labelRoman.text = String(symbols)
     }
     
     @IBAction func pushD(_ sender: UIButton) {
-        labelRoman.text = "D"
+        symbols.append("D")
+        labelRoman.text = String(symbols)
     }
     
     @IBAction func pushM(_ sender: UIButton) {
-        labelRoman.text = "M"
+        symbols.append("M")
+        labelRoman.text = String(symbols)
     }
     
 }
