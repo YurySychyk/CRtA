@@ -8,20 +8,21 @@
 import Foundation
 var number = 0
 var symbols = [Character]()
-
+var cor = 0
 func romanNumbers(roman: [Character]) -> Int {
-    for i in roman {
-        symbols.append(i)
-    }
-   // print(symbols)
-    var cor = 0
+    number = 0
+  
     for i in 0...symbols.count {
-        //print("")
         if (i + cor + 1) <= symbols.count {
             let a = symbols[i + cor]
-           // print("a = \(a)")
-            let b = symbols[i + 1 + cor]
-           // print("b = \(b)")
+            var b: Character = "q"
+            if symbols.count == 1 {
+                b = "q"
+            } else if symbols.count == 2 {
+                b = symbols[1]
+            } else {
+                b = symbols[i + 1 + cor]
+            }
         switch (a, b){
         case ("I","V"):
             number += 4
